@@ -107,5 +107,39 @@ hr{
     <p>boAt Airdopes 172 True Wireless in Ear Earbuds with Enx Tech, Beast Mode, 35H Playtime, 11mm Drivers, ASAP Charge, IPX4, IWP, Touch Controls(Stunning Black)<br>
     <span style="font-style: italic; font-weight: bold;"> Price :1,299</p>
   </div>
-</body>
+
+    <p id="counter"></p>
+
+  <script>
+
+    // Check if the counter value is stored in local storage
+
+    let count = localStorage.getItem("count");
+
+    if (count === null) {
+
+      // If not, initialize the counter to 0
+
+      count = 0;
+
+    }
+
+    // Increment the counter by 1
+
+    count++;
+
+    // Store the updated counter value in local storage
+
+    localStorage.setItem("count", count);
+
+    // Display the counter value at the bottom of the page
+
+    document.getElementById("counter").innerHTML = "This website has been opened " + count + " times.";
+
+  </script>
+  
+  
+  
+  
+  </body>
 </html>

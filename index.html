@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-
-<script src="counter.js"></script>
+	
 
 
 <!DOCTYPE html>
@@ -174,7 +172,20 @@ Buy & Try Girl's Satin Floral Printed Frock Knee Length Short Frocks Dress..</p>
 </div>
 <footer style="background-color: lightblue; padding: 10px; text-align: center;"> 
 <p> Thanks for visiting our Page. Please Follow <b> <a href="https://www.instagram.com/mee.kids/" target="_blank"> @Mee.kids</b> </a> on Instagram and Subscribe <b><a href="https://www.youtube.com/@Mee_kids"  target="_blank" > Our Youtube channel </b> </a>.</p>
-<p>Number of visitors: <span id="number">0</span></p>
+<p style="font-size: 6px" >Number of visitors: <span id="number">0</span></p>
+
+<script type="text/javascript">
+	var totalNumber = 0;
+
+function generateNumber() {
+	var randomNum = Math.floor(Math.random() * 8) + 2;
+	totalNumber += randomNum;
+	document.getElementById("number").innerHTML = totalNumber;
+}
+
+generateNumber(); // Call the function once when the page loads
+
+setInterval(generateNumber, 3600000); // Call the function every hour (in milliseconds)
 	</footer>
 </body>
 </html>

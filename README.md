@@ -1,2 +1,2 @@
-# aibased
-Website created using Chat GPT
+mee.kids
+

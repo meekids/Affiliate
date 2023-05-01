@@ -161,7 +161,76 @@ header:hover {
 
 		
 		
-		
+	/* Navigation bar styles */
+nav {
+  background-color: #333;
+  color: #fff;
+  display: block;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  display: block;
+  line-height: 50px;
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+/* Toggle button styles */
+#toggle-nav-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+}
+
+/* Hidden navigation bar styles */
+#main-nav.hidden {
+  display: none;
+}
+
+
+/* Styles for screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  nav {
+    height: 60px;
+  }
+
+  nav ul li {
+    margin-right: 10px;
+  }
+
+  #toggle-nav-button {
+    font-size: 30px;
+    right: 5px;
+    top: 5px;
+  }
+}	
 		
 		
 		
@@ -174,7 +243,18 @@ header:hover {
 	
 	
 	
-	
+	  <button id="toggle-nav-button"><i class="fa fa-bars"></i></button>
+  <nav id="main-nav">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <!-- Main content goes here -->
+  </main>
 	
 	
 
@@ -362,6 +442,17 @@ function generateNumber() {
 generateNumber(); // Call the function once when the page loads
 
 setInterval(generateNumber, 3600); // Call the function every hour (in milliseconds)
+	
+	
+	// Toggle the visibility of the navigation bar when the button is clicked
+document.getElementById('toggle-nav-button').addEventListener('click', function() {
+  document.getElementById('main-nav').classList.toggle('hidden');
+});
+
+	
+	
+	
+	
 </script>
 </footer>
 </body>

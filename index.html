@@ -68,29 +68,6 @@
 }
 
 
-  ul {
-    list-style: none; /* remove bullets */
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif ;
-
-    
-  }
-  li{
-  	padding-left: 50px;
-	margin: 8px ;
-	border-bottom: 1px solid black;
-	border-left: 5px solid black;
-
-  }
-  li:nth-child(odd) {
-    background-color: #f2f2f2; /* light background for odd-numbered list items */
-    border-top: 2px solid lightyellow ;
-  }
-  li:nth-child(even) {
-    background-color: lightyellow; /* light background for even-numbered list items */
-    border-top: 2px solid #f2f2f2 ;
-  }
-
 
 
 		
@@ -109,25 +86,6 @@
   transition: background-color 0.3s ease;
 }
 
-.company-info h1 {
-  font-size: 36px;
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: #1e2d3b;
-}
-
-.company-info .slogan {
-  font-size: 24px;
-  margin: 0;
-  font-family: 'Dancing Script', cursive;
-  font-weight: 400;
-  color: #4f4f4f;
-}
-
-.logo img {
-  max-height: 50px;
-}
 
 header:hover {
   background-color: #a7cde5;
@@ -347,20 +305,15 @@ nav ul li a {
 	
 
 	<nav class="navbar">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+     <ul>
+  <li><a href="#Summer"> Summer Collection</a></li>
+  <li><a href="#cloths">Mom Dad Printed Kids Wear</a></li>
+  <li><a href="#cloth">Kids Stylish Wear</a></li>
+  <li><a href="#toys">Educational Toys</a></li>
+  
+</ul>
     </nav>
-    <div class="hamburger" onclick="toggleNavbar()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
+   
 	
 
 	
@@ -383,24 +336,24 @@ nav ul li a {
 	
 	
 	<header class="header">
+     <div class="hamburger" onclick="toggleNavbar()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
 		<a href="https://www.instagram.com/mee.kids/" target="_blank">
 		<img src="logo.png" height="120px" width="120px" align="left"></a>
     <a href="https://www.instagram.com/mee.kids/" target="_blank">
         <h1 style="display: inline;">Mee.kids</h1>
         <p>Spreading smiles by cuteness</p>
     </a>
-		<a style="text-decoration: none; vertical-align: top;" href="https://amzn.to/3ALdsiU"><h4 style=" text-align: right;  color: black; vertical-align: top;  " ><b>OPEN AMAZON</b></h5></h4>
+		<a style="text-decoration: none; vertical-align: top;" href="https://amzn.to/3ALdsiU"><h3 style=" text-align: right;  color: black; vertical-align: top;  " ><b>OPEN AMAZON</b></h4>
 
    
 </header>
 <marquee> <span  style=" font-size:15px; width:100%; padding: 0 ; margin: 0; border: 2px  solid black "> Click on Product to Check Price & More Details (or Browse other Products )..... <b>  Cloths Available according to Different Age Group </b>    </span> </marquee>
-<ul>
-	<li><a href="#Summer"> Summer Collection</a></li>
-  <li><a href="#cloths">Mom Dad Printed Kids Wear</a></li>
-  <li><a href="#cloth">Kids Stylish Wear</a></li>
-  <li><a href="#toys">Educational Toys</a></li>
-  
-</ul>
+
 
 	<div class="container">
 
@@ -565,6 +518,8 @@ setInterval(generateNumber, 3600); // Call the function every hour (in milliseco
 	// Toggle the visibility of the navigation bar when the button is clicked
 
 
+
+
 	function toggleNavbar() {
         const navbar = document.querySelector('.navbar');
         const hamburger = document.querySelector('.hamburger');
@@ -578,7 +533,23 @@ setInterval(generateNumber, 3600); // Call the function every hour (in milliseco
       }
     
 
-	
+	  // Get the navigation bar and the toggle button
+  const nav = document.querySelector('nav');
+  
+
+  // Hide the navigation bar when a link is clicked
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.style.display = 'none';
+    });
+  });
+
+ 
+
+
+
+
+</script>
 	
 	
 </script>

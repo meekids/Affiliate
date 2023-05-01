@@ -232,6 +232,95 @@ nav ul li a {
   }
 }	
 		
+
+		
+		
+
+		
+	body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background-color: #333333;
+        padding: 50px 20px;
+        box-sizing: border-box;
+        transition: top 0.5s ease-in-out;
+        z-index: 9999;
+      }
+
+      .navbar.show {
+        top: 0;
+      }
+
+      .navbar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .navbar li {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 24px;
+        font-weight: bold;
+        transition: color 0.2s ease;
+      }
+
+      .navbar a:hover {
+        color: #aaaaaa;
+      }
+
+      .hamburger {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        z-index: 99999;
+        color: #333333;
+      }
+
+      .hamburger span {
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: #333333;
+        margin-bottom: 8px;
+        transition: transform 0.2s ease-in-out, background-color 0.2s ease;
+      }
+
+      .hamburger.show span {
+        background-color: #ffffff;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-6px, -6px);
+      }	
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -244,6 +333,45 @@ nav ul li a {
 	
 	
 	  
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	<nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleNavbar()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
 
 	
 	
@@ -437,7 +565,19 @@ setInterval(generateNumber, 3600); // Call the function every hour (in milliseco
 	// Toggle the visibility of the navigation bar when the button is clicked
 
 
-	
+	function toggleNavbar() {
+        const navbar = document.querySelector('.navbar');
+        const hamburger = document.querySelector('.hamburger');
+        navbar.classList.toggle('show');
+        hamburger.classList.toggle('active');
+        if (navbar.classList.contains('show')) {
+          hamburger.classList.add('show');
+        } else {
+          hamburger.classList.remove('show');
+        }
+      }
+    
+
 	
 	
 	

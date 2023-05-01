@@ -92,9 +92,106 @@
   }
 
 
+
+		
+
+	header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #c3e3f9;
+  color: #1e2d3b;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.company-info h1 {
+  font-size: 36px;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #1e2d3b;
+}
+
+.company-info .slogan {
+  font-size: 24px;
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
+  color: #4f4f4f;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+header:hover {
+  background-color: #a7cde5;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .company-info h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .company-info .slogan {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .logo {
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+	
+		
+
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
 	</style>
 </head>
 <body>
+	
+	
+	
+	
+	
+	
+	<header>
+  <div class="company-info">
+    <h1>Your Company Name</h1>
+    <p class="slogan">Your Slogan</p>
+  </div>
+  <div class="logo">
+    <img src="your-logo.png" alt="Your Logo">
+  </div>
+</header>
+
+	
+	
+	
+	
+	
+	
 	<header class="header">
 		<a href="https://www.instagram.com/mee.kids/" target="_blank">
 		<img src="logo.png" height="120px" width="120px" align="left"></a>

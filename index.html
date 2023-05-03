@@ -1,62 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mee.kids Affiliate Links</title>
-	<script src="counter.js"></script>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			margin: 0;
-			padding: 0;
-		}
-		.header {
-			background-color: #ffccff;
-			text-align: center;
-			padding: 20px;
-		}
-		h1 {
-			font-size: 48px;
-			margin: 0;
-		}
-		p {
-			font-size: 18px;
-			margin: 0;
-		}
-		.container {
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 20px;
-		}
+  <title>Mee.kids Affiliate Links</title>
+  <script src="counter.js"></script>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #ffccff;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+    p {
+      font-size: 18px;
+      margin: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+.product {
+  height: 100%;
+  margin: 0;
+}
 
-		.product {
-			width: 100%;
-			background-color: #f2f2f2;
-			border: 1px solid #ccc;
-			border-radius: 5px;
-			margin-bottom: 20px;
-			padding: 20px;
-			box-sizing: border-box;
-			text-align: center;
 
-		}
-		a{
-			text-decoration: none;
-			color: black;
-		}
-		.product img {
-			max-width: 100%;
-			max-height: 400px;
-			margin: 20px 0;
-			border-radius: 10px;		}
-		.product h3 {
-			margin-top: 0;
-			color: red; 
-		}
-		.product p {
-			font-size: 16px;
-			line-height: 1.5;
-		}
-		.hover {
+
+    .product {
+      width: 100%;
+        background: linear-gradient(to bottom, white, skyblue);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    .product img {
+      max-width: 100%;
+      max-height: 400px;
+      margin: 20px 0;
+      border-radius: 10px;    }
+    .product h3 {
+      margin-top: 0;
+      color: red; 
+    }
+    .product p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .hover {
   border: 1px solid transparent; /* Set the default border to be transparent */
   transition: border-color max-height max-width 0.3s ease-in-out; /* Add a transition effect to the border color */
 }
@@ -70,9 +80,9 @@
 
 
 
-		
+    
 
-	header {
+  header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -112,250 +122,158 @@ header:hover {
     margin-top: 10px;
   }
 }
-	
-		
-
-		
-
-		
-		
-	/* Navigation bar styles */
+  
+    
 nav {
-  background-color: #333;
-  color: #fff;
-  display: block;
-  height: 50px;
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 1;
+  right: 0;
+  background-color: #333;
+  padding: 20px;
+  display: none; /* initially hidden */
+  font-family: cursive;
+  font-weight: bold;
+  height: calc(100% - 40px); /* adjust the height */
+  width: 300px;
+  overflow-y: auto; /* add scrollbar when necessary */
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-nav ul li a {
-  color: #fff;
+nav a {
   display: block;
-  line-height: 50px;
-  padding: 0 10px;
+  color: grey;
   text-decoration: none;
+  margin: 10px 0;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+  font-size: 24px; /* adjust the font size */
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  background: linear-gradient(to right, #87CEFA, #fff); /* add color gradient */
 }
 
-/* Toggle button styles */
-#toggle-nav-button {
-  background-color: transparent;
-  border: none;
-  color: #fff;
+nav a:hover {
+  background: linear-gradient(to right, #0077c2, #fff); /* change gradient on hover */
+}
+
+#nav-icon {
+  position: fixed;
+  top: 0;
+  right: 20px;
+  padding: 20px;
   cursor: pointer;
-  font-size: 24px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  z-index: 2;
+  z-index: 9999;
 }
 
-/* Hidden navigation bar styles */
-#main-nav.hidden {
-  display: none;
+#nav-icon span {
+  display: block;
+  width: 30px;
+  height: 5px;
+  background-color: red;
+  margin: 5px 0;
+  transition: transform 0.3s ease;
 }
 
+/* rotate the top and bottom lines to form an X shape */
+#nav-icon.open span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+#nav-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+#nav-icon.open span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -5px);
+}
+    
 
-/* Styles for screens smaller than 600px */
-@media only screen and (max-width: 600px) {
-  body {
-    font-size: 25px;
-  }
+    
+    
 
-  nav {
-    height: 60px;
-  }
-
-  nav ul li {
-    margin-right: 10px;
-  }
-
-  #toggle-nav-button {
-    font-size: 30px;
-    right: 5px;
-    top: 5px;
-  }
-}	
-		
-
-		
-		
-
-		
-	body {
-        margin: 0;
-        padding: 0;
-      }
-
-      .navbar {
-        position: fixed;
-        top: -100%;
-        left: 0;
-        right: 0;
-        height: 100%;
-        background-color: #333333;
-        padding: 50px 20px;
-        box-sizing: border-box;
-        transition: top 0.5s ease-in-out;
-        z-index: 9999;
-      }
-
-      .navbar.show {
-        top: 0;
-      }
-
-      .navbar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .navbar li {
-        margin-bottom: 20px;
-        text-align: center;
-      }
-
-      .navbar a {
-        text-decoration: none;
-        color: #ffffff;
-        font-size: 24px;
-        font-weight: bold;
-        transition: color 0.2s ease;
-      }
-
-      .navbar a:hover {
-        color: #aaaaaa;
-      }
-
-      .hamburger {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-        z-index: 99999;
-        color: #333333;
-      }
-
-      .hamburger span {
-        display: block;
-        width: 30px;
-        height: 4px;
-        background-color: #333333;
-        margin-bottom: 8px;
-        transition: transform 0.2s ease-in-out, background-color 0.2s ease;
-      }
-
-      .hamburger.show span {
-        background-color: #ffffff;
-      }
-
-      .hamburger.active span:nth-child(1) {
-        transform: rotate(-45deg) translate(-6px, 6px);
-      }
-
-      .hamburger.active span:nth-child(2) {
-        opacity: 0;
-      }
-
-      .hamburger.active span:nth-child(3) {
-        transform: rotate(45deg) translate(-6px, -6px);
-      }	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	</style>
+    
+    
+    
+    
+    
+    
+    
+    
+  </style>
 </head>
 <body>
-	
-	
-	
-	
-	  
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-	<nav class="navbar">
-     <ul>
-  <li><a href="#Summer"> Summer Collection</a></li>
-  <li><a href="#cloths">Mom Dad Printed Kids Wear</a></li>
-  <li><a href="#cloth">Kids Stylish Wear</a></li>
-  <li><a href="#toys">Educational Toys</a></li>
   
-</ul>
-    </nav>
-   
-	
+  
+  
+  
+    
 
-	
+  
 
-	
+  
 
-	
+  
 
-	
+  
 
-	
+  
 
-	
-	
+  
 
-	
-	
-	
-	
-	
-	
-	<header class="header">
+ <!-- hamburger icon -->
+  <div id="nav-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <!-- navigation bar -->
+  <nav>
+    <a href="#Summer"> Summer Collection</a>
+    <a href="#cloths"> Mom Dad Printed Kids Wear </a>
+    <a href="#cloth">Kids Stylish  Wear</a>
+    <a href="#toys"> Educational Toys </a>
+    <a style="color: red ; " href="https://www.instagram.com/mee.kids/"> Our Instagram Page  </a>
+    <a style="color: red ;" href="https://amzn.to/3ALdsiU"> OPEN AMAZON  </a>
+  </nav>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  <header class="header">
      <div class="hamburger" onclick="toggleNavbar()">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-		<a href="https://www.instagram.com/mee.kids/" target="_blank">
-		<img src="logo.png" height="120px" width="120px" align="left"></a>
+    <a href="https://www.instagram.com/mee.kids/" target="_blank">
+    <img src="logo.png" height="120px" width="120px" align="left"></a>
     <a href="https://www.instagram.com/mee.kids/" target="_blank">
         <h1 style="display: inline;">Mee.kids</h1>
         <p>Spreading smiles by cuteness</p>
     </a>
-		<a style="text-decoration: none; vertical-align: top;" href="https://amzn.to/3ALdsiU"><h3 style=" text-align: right;  color: black; vertical-align: top;  " ><b>OPEN AMAZON</b></h4>
+    <a style="text-decoration: none; vertical-align: top;" href="https://amzn.to/3ALdsiU"><h3 style=" text-align: right;  color: black; vertical-align: top;  " ><b>OPEN AMAZON</b></h4>
 
    
 </header>
-<marquee> <span  style=" font-size:15px; width:100%; padding: 0 ; margin: 0; border: 2px  solid black "> Click on Product to Check Price & More Details (or Browse other Products )..... <b>  Cloths Available according to Different Age Group </b>    </span> </marquee>
+<span  style=" font-size:15px; width:100%; padding: 0 ; margin: 0; border: 2px  solid black "> Click on Product to Check Price & More Details (or Browse other Products )..... <b>  Cloths Available according to Different Age Group </b>    </span> 
 
 
-	<div class="container">
+  <div class="container">
 
 <h2 id="Summer"> Summer Collection  </h2>
 <a href="https://amzn.to/3n9rcRL" target="_blank" >
@@ -391,44 +309,44 @@ CIYCUIT Toddler Baby Boys Shorts Set Short Sleeve Button Down Shirt + Shorts Pan
 
 
 
-		<h2 id="cloths"> Mom Dad Printed Kids Wear   </h2>
-		<a href="https://amzn.to/3LeuKKi" target="_blank">
-		<div class="product">
-			<h3>Tshirt Pant Set</h3>
-			<img src="https://m.media-amazon.com/images/I/81q2OEi5U0L._UL1500_.jpg" alt="Product 1" class="hover" >
-			<p>Brand: JUSFAB <br>
-				Jusfab Printed Kids Tshirt Pant Set 100% Cotton Infantwear Top Bottom Combo Pack.</p>
-		</div></a>
+    <h2 id="cloths"> Mom Dad Printed Kids Wear   </h2>
+    <a href="https://amzn.to/3LeuKKi" target="_blank">
+    <div class="product">
+      <h3>Tshirt Pant Set</h3>
+      <img src="https://m.media-amazon.com/images/I/81q2OEi5U0L._UL1500_.jpg" alt="Product 1" class="hover" >
+      <p>Brand: JUSFAB <br>
+        Jusfab Printed Kids Tshirt Pant Set 100% Cotton Infantwear Top Bottom Combo Pack.</p>
+    </div></a>
 
 
-		<a href="https://amzn.to/41NWJHZ" target="_blank">
-		<div class="product">
-			<h3>Tshirt Pant Set</h3>
-			<img src="https://m.media-amazon.com/images/I/81OCMNJQpqL._SL1500_.jpg" alt="Product 2" class="hover" >
-			<p>Jusfab Printed Kids Infant wear Tshirt Pant Set for 1.5 to 2 Years Baby Boy Girl -Pure Cotton Blue Tee Blue Shorts<br>
+    <a href="https://amzn.to/41NWJHZ" target="_blank">
+    <div class="product">
+      <h3>Tshirt Pant Set</h3>
+      <img src="https://m.media-amazon.com/images/I/81OCMNJQpqL._SL1500_.jpg" alt="Product 2" class="hover" >
+      <p>Jusfab Printed Kids Infant wear Tshirt Pant Set for 1.5 to 2 Years Baby Boy Girl -Pure Cotton Blue Tee Blue Shorts<br>
 Style:18 Months-24 Months</p>
-		</div></a>
+    </div></a>
 
-		<h2 id="cloth"> Kids Stylish  Wear </h2>
-		<a href="https://amzn.to/3AClxqp" target="_blank">
-		<div class="product" >
-			<h3>Kurta Paijama </h3>
-			<img src="https://m.media-amazon.com/images/I/31c5dsuDNGL.jpg" alt="Product 3" class="hover" >
-			<p>Brand: NEW GEN <br>
-				
-			NEW GEN BOYS JACKET KURTA & PAIJAMA PANT
-				<b> Available according to Different Age Group </b> 
-			</p>
-		</div></a>
+    <h2 id="cloth"> Kids Stylish  Wear </h2>
+    <a href="https://amzn.to/3AClxqp" target="_blank">
+    <div class="product" >
+      <h3>Kurta Paijama </h3>
+      <img src="https://m.media-amazon.com/images/I/31c5dsuDNGL.jpg" alt="Product 3" class="hover" >
+      <p>Brand: NEW GEN <br>
+        
+      NEW GEN BOYS JACKET KURTA & PAIJAMA PANT
+        <b> Available according to Different Age Group </b> 
+      </p>
+    </div></a>
 
-		<a href="https://amzn.to/422UAYI" target="_blank" >
-		<div class="product">
-			<h3>Dhoti Kurta</h3>
-			<img src="https://m.media-amazon.com/images/I/617VcHjIujL._UL1500_.jpg" alt="Product 4" class="hover" >
-			<p>
+    <a href="https://amzn.to/422UAYI" target="_blank" >
+    <div class="product">
+      <h3>Dhoti Kurta</h3>
+      <img src="https://m.media-amazon.com/images/I/617VcHjIujL._UL1500_.jpg" alt="Product 4" class="hover" >
+      <p>
 Brand: Jimmy Jammy<br>
 Jimmy Jammy Ethnic Wear Dhoti Kurta for Baby Boys & Kids 100% Cotton ( 1 Months - 2 Years ) Boys Summer Dress
-			<b> Available according to Different Age Group </b> </p>
+      <b> Available according to Different Age Group </b> </p>
 </div></a>
 
 
@@ -440,9 +358,9 @@ Jimmy Jammy Ethnic Wear Dhoti Kurta for Baby Boys & Kids 100% Cotton ( 1 Months 
 <img src="https://m.media-amazon.com/images/I/515m18EZNaL._UL1500_.jpg" alt="Product 5" class="hover" >
 <p>Brand: GREAT BEAR <br>
  Boys Festive & Party, Ethnic Kurta, Waistcoat and Pyjama Set
-	 Available according to Different Age Group 
-	
-	</p>
+   Available according to Different Age Group 
+  
+  </p>
 </div></a>
 
 <a href="https://amzn.to/3Vl2bzr" target="_blank" >
@@ -502,45 +420,39 @@ Play Poco Spelling Fun Type 1 - 150 Piece Spelling Puzzle - Learn to Spell 50 Th
 <p> Thanks for visiting our Page. Please Follow <b> <a href="https://www.instagram.com/mee.kids/" target="_blank"> @Mee.kids</b> </a> on Instagram and Subscribe <b><a href="https://www.youtube.com/@Mee_kids"  target="_blank" > Our Youtube channel </b> </a>.</p>
 <p style="font-size: 6px" >Number of visitors: <span id="number">10</span></p>
 <script type="text/javascript">
-		var totalNumber = 0;
+    var totalNumber = 0;
 
 function generateNumber() {
-	var randomNum = Math.floor(Math.random() * 8) + 2;
-	totalNumber += randomNum;
-	document.getElementById("number").innerHTML = totalNumber;
+  var randomNum = Math.floor(Math.random() * 8) + 2;
+  totalNumber += randomNum;
+  document.getElementById("number").innerHTML = totalNumber;
 }
 
 generateNumber(); // Call the function once when the page loads
 
 setInterval(generateNumber, 3600); // Call the function every hour (in milliseconds)
-	
-	
-	// Toggle the visibility of the navigation bar when the button is clicked
-
-
-
-
-	function toggleNavbar() {
-        const navbar = document.querySelector('.navbar');
-        const hamburger = document.querySelector('.hamburger');
-        navbar.classList.toggle('show');
-        hamburger.classList.toggle('active');
-        if (navbar.classList.contains('show')) {
-          hamburger.classList.add('show');
-        } else {
-          hamburger.classList.remove('show');
-        }
-      }
-    
-
-	  // Get the navigation bar and the toggle button
-  const nav = document.querySelector('nav');
   
+  
+  // Toggle the visibility of the navigation bar when the button is clicked
 
-  // Hide the navigation bar when a link is clicked
-  nav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.style.display = 'none';
+
+
+
+  var navIcon = document.getElementById('nav-icon');
+  var navLinks = document.getElementsByTagName('nav')[0];
+  navIcon.addEventListener('click', function() {
+    this.classList.toggle('open');
+    if (navLinks.style.display === 'block') {
+      navLinks.style.display = 'none';
+    } else {
+      navLinks.style.display = 'block';
+    }
+  });
+  var navLinksArray = Array.from(navLinks.getElementsByTagName('a'));
+  navLinksArray.forEach(function(link) {
+    link.addEventListener('click', function() {
+      navIcon.classList.remove('open');
+      navLinks.style.display = 'none';
     });
   });
 
@@ -550,8 +462,8 @@ setInterval(generateNumber, 3600); // Call the function every hour (in milliseco
 
 
 </script>
-	
-	
+  
+  
 </script>
 </footer>
 </body>

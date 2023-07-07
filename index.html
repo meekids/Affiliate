@@ -1,486 +1,152 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mee.kids Affiliate Links</title>
-  <script src="counter.js"></script>
-  <style>
-    
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    .header {
-      background-color: #ffccff;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      font-size: 48px;
-      margin: 0;
-    }
-    p {
-      font-size: 30   px;
-      margin: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-.product {
-  height: 100%;
-  margin: 0;
-}
+    <title>Square Number Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
+        .container {
+            width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
 
+        .question {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
 
-    .product {
-      width: 100%;
-        background: linear-gradient(to bottom, white, skyblue);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
+        .options {
+            margin-bottom: 20px;
+        }
 
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      padding: 20px;
-      box-sizing: border-box;
-      text-align: center;
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
 
-    }
-    a{
-      text-decoration: none;
-      color: black;
-    }
-    .product img {
-      max-width: 100%;
-      max-height: 400px;
-      margin: 20px 0;
-      border-radius: 10px;    }
-    .product h3 {
-      margin-top: 0;
-      color: red; 
-    }
-    .product p {
-      font-size: 16px;
-      line-height: 1.5;
-    }
-    .hover {
-  border: 1px solid transparent; /* Set the default border to be transparent */
-  transition: border-color max-height max-width 0.3s ease-in-out; /* Add a transition effect to the border color */
-}
+        .next-button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-.hover:hover {
-  border-color: black; /* Change the border color to black when hovered */ 
-  box-shadow: 2px 2px 5px;
-  border-radius: 20px; 
-}
-
-
-
-
-    
-
-  header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #c3e3f9;
-  color: #1e2d3b;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
-}
-
-
-header:hover {
-  background-color: #a7cde5;
-}
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .company-info h1 {
-    font-size: 28px;
-    text-align: center;
-  }
-
-  .company-info .slogan {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  .logo {
-    text-align: center;
-    margin-top: 10px;
-  }
-}
-  
-    
-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #333;
-  padding: 20px;
-  display: none; /* initially hidden */
-  font-family: cursive;
-  font-weight: bold;
-  height: calc(100% - 40px); /* adjust the height */
-  width: 300px;
-  overflow-y: auto; /* add scrollbar when necessary */
-}
-
-nav a {
-  display: block;
-  color: grey;
-  text-decoration: none;
-  margin: 10px 0;
-  padding: 20px;
-  transition: background-color 0.3s ease;
-  font-size: 24px; /* adjust the font size */
-  box-sizing: border-box;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  background: linear-gradient(to right, #87CEFA, #fff); /* add color gradient */
-}
-
-nav a:hover {
-  background: linear-gradient(to right, #0077c2, #fff); /* change gradient on hover */
-}
-
-#nav-icon {
-  position: fixed;
-  top: 0;
-  right: 20px;
-  padding: 20px;
-  cursor: pointer;
-  z-index: 9999;
-}
-
-#nav-icon span {
-  display: block;
-  width: 30px;
-  height: 5px;
-  background-color: red;
-  margin: 5px 0;
-  transition: transform 0.3s ease;
-}
-
-/* rotate the top and bottom lines to form an X shape */
-#nav-icon.open span:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 5px);
-}
-#nav-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-#nav-icon.open span:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -5px);
-}
-    
-
-    
-    
-
-   
-    
-    
-    
-    
-    
-    
-    
-  </style>
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body >
-  
-  
-  
-  
-    
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
- <!-- hamburger icon -->
-  <div id="nav-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <!-- navigation bar -->
-  <nav>
-    <a href="#Summer"> Summer Collection</a>
-    <a href="#cloths"> Mom Dad Printed Kids Wear </a>
-    <a href="#cloth">Kids Stylish  Wear</a>
-    <a href="#toys"> Educational Toys </a>
-    <a style="color: red ; " href="https://www.instagram.com/mee.kids/"> Our Instagram Page  </a>
-    <a style="color: red ;" href="https://amzn.to/3ALdsiU"> OPEN AMAZON  </a>
-  </nav>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-  
-  
-  
-  
-  
-  <header class="header">
-     <div class="hamburger" onclick="toggleNavbar()">
-      <span></span>
-      <span></span>
-      <span></span>
+<body>
+    <div class="container">
+        <div id="question-container">
+            <div id="question-number"></div>
+            <div id="question"></div>
+            <div id="options"></div>
+            <button class="next-button" onclick="nextQuestion()">Next</button>
+        </div>
+        <div id="result-container" style="display: none;">
+            <div class="result" id="result"></div>
+            <button class="next-button" onclick="restartTest()">Restart Test</button>
+        </div>
     </div>
 
-    
-    <a href="https://meekids.github.io/Links/">
-    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
-<lord-icon
-    src="https://cdn.lordicon.com/etqbfrgp.json"
-    trigger="loop"
-    colors="outline:#131432,primary:#92140c,secondary:#f24c00,tertiary:#b26836,quaternary:#ebe6ef"
-    state="loop"
-    style="width:70px;height:70px; position: fixed;
-    top: 1px;
-    left: 1px;">
-</lord-icon>
-</a>
+    <script>
+        var questions = generateRandomQuestions(50);
+        var currentQuestion = 0;
+        var score = 0;
 
-    
-    
-    <a href="https://www.instagram.com/mee.kids/" target="_blank">
-    <img src="logo.png" height="120px" width="120px" align="left"></a>
-    <a href="https://www.instagram.com/mee.kids/" target="_blank">
-        <h1 style="display: inline;">Mee.kids</h1>
-        <p>Spreading smiles by cuteness</p>
-    </a>
-    <a style="text-decoration: none; vertical-align: top;" href="https://amzn.to/3LVNV.Ja"><h3 style=" text-align: right;  color: red; vertical-align: top;  " ><b>Click : Mother's Day Sale 🔥</b></h4>
+        function generateRandomQuestions(count) {
+            var squares = [];
 
-   
-</header>
-<span  style=" font-size:15px; width:100%; padding: 0 ; margin: 0; border: 2px  solid black "> Click on Product to Check Price & More Details (or Browse other Products )..... <b>  Cloths Available according to Different Age Group </b>    </span> 
+            for (var i = 14; i <= 30; i++) {
+                squares.push(i * i);
+            }
 
+            var randomQuestions = [];
 
-  <div class="container">
+            for (var j = 0; j < count; j++) {
+                var randomIndex = Math.floor(Math.random() * squares.length);
+                var randomNumber = Math.floor(Math.random() * (30 - 14 + 1) + 14);
+                randomQuestions.push({ number: randomNumber, answer: squares[randomIndex] });
+            }
 
-<h2 id="Summer"> Summer Collection  </h2>
-<a href="https://amzn.to/3n9rcRL" target="_blank" >
-<div class="product">
-<h3> Shorts Sets </h3>
-<img src="https://m.media-amazon.com/images/I/61swEdznnxL._UL1001_.jpg" alt="Product 5" class="hover" >
+            return randomQuestions;
+        }
 
-<p style="font-size: 25px; font-family: georgia;">
-Brand: JunNeng<br>
-JooNeng Toddler Baby Boy Shorts Sets Hawaiian Outfit,Infant Kid Leave Floral Short Sleeve Shirt Top+Shorts Suits Dark Blue, 12-18 Months 
-</p> </div></a>
+        function loadQuestion() {
+            var questionNumberElement = document.getElementById('question-number');
+            var questionElement = document.getElementById('question');
+            var optionsElement = document.getElementById('options');
+            var question = questions[currentQuestion];
 
+            questionNumberElement.textContent = 'Question ' + (currentQuestion + 1) + ':';
+            questionElement.textContent = 'Square of ' + question.number + ':';
 
+            optionsElement.innerHTML = '';
+            optionsElement.innerHTML += '<label><input type="number" id="answer" autofocus required></label>';
+        }
 
-<a href="https://amzn.to/3AJbIqF" target="_blank" >
-<div class="product">
-<h3> Cotton Clothing </h3>
-<img src="https://m.media-amazon.com/images/I/71q5NA1rJML._UL1500_.jpg" alt="Product 5" class="hover" >
-<img src="https://m.media-amazon.com/images/I/71hAwDQ2btL._UL1500_.jpg" alt="Product 5" class="hover" >
-<p style="font-size: 25px; font-family: georgia;">ARIEL Cotton Clothing Sets for Baby Boys & girls - Unisex Clothing sets Full Sleeve T-shirt & Pant</p>
-</div></a>
+        function nextQuestion(event) {
+            // Check if the key pressed is Enter (key code 13)
+            if (event.keyCode === 13) {
+                var answer = parseInt(document.getElementById('answer').value);
+                var question = questions[currentQuestion];
 
+                if (answer === question.answer) {
+                    score++;
+                }
 
+                currentQuestion++;
 
-<a href="https://amzn.to/44dbOnU" target="_blank" >
-<div class="product">
-<h3>  Shorts Set </h3>
-<img src="https://m.media-amazon.com/images/I/61bPjmGo73L._UL1200_.jpg" alt="Product 5" class="hover" >
-<img src="https://m.media-amazon.com/images/I/815qja0+d0L._UL1200_.jpg" alt="Product 5" class="hover" >
-<p style="font-size: 25px; font-family: georgia;">Brand: CIYCUIT<br>
-CIYCUIT Toddler Baby Boys Shorts Set Short Sleeve Button Down Shirt + Shorts Pants 2 Pieces Summer Print Clothes Outfits</p>
-</div></a>
+                if (currentQuestion < questions.length) {
+                    loadQuestion();
+                } else {
+                    showResult();
+                }
+            }
+        }
 
+        function showResult() {
+            var questionContainer = document.getElementById('question-container');
+            var resultContainer = document.getElementById('result-container');
+            var resultElement = document.getElementById('result');
 
+            questionContainer.style.display = 'none';
+            resultContainer.style.display = 'block';
 
+            resultElement.textContent = 'You scored ' + score + ' out of ' + questions.length + '!';
+        }
 
-    <h2 id="cloths"> Mom Dad Printed Kids Wear   </h2>
-    <a href="https://amzn.to/3LeuKKi" target="_blank">
-    <div class="product">
-      <h3>Tshirt Pant Set</h3>
-      <img src="https://m.media-amazon.com/images/I/81q2OEi5U0L._UL1500_.jpg" alt="Product 1" class="hover" >
-      <p style="font-size: 25px; font-family: georgia;">Brand: JUSFAB <br>
-        Jusfab Printed Kids Tshirt Pant Set 100% Cotton Infantwear Top Bottom Combo Pack.</p>
-    </div></a>
+        function restartTest() {
+            questions = generateRandomQuestions(50);
+            currentQuestion = 0;
+            score = 0;
 
+            var questionContainer = document.getElementById('question-container');
+            var resultContainer = document.getElementById('result-container');
 
-    <a href="https://amzn.to/41NWJHZ" target="_blank">
-    <div class="product">
-      <h3>Tshirt Pant Set</h3>
-      <img src="https://m.media-amazon.com/images/I/81OCMNJQpqL._SL1500_.jpg" alt="Product 2" class="hover" >
-      <p style="font-size: 25px; font-family: georgia;">Jusfab Printed Kids Infant wear Tshirt Pant Set for 1.5 to 2 Years Baby Boy Girl -Pure Cotton Blue Tee Blue Shorts<br>
-Style:18 Months-24 Months</p>
-    </div></a>
+            questionContainer.style.display = 'block';
+            resultContainer.style.display = 'none';
 
-    <h2 id="cloth"> Kids Stylish  Wear </h2>
-    <a href="https://amzn.to/3AClxqp" target="_blank">
-    <div class="product" >
-      <h3>Kurta Paijama </h3>
-      <img src="https://m.media-amazon.com/images/I/31c5dsuDNGL.jpg" alt="Product 3" class="hover" >
-      <p style="font-size: 25px; font-family: georgia;">Brand: NEW GEN <br>
-        
-      NEW GEN BOYS JACKET KURTA & PAIJAMA PANT
-        <b> Available according to Different Age Group </b> 
-      </p>
-    </div></a>
+            loadQuestion();
+        }
 
-    <a href="https://amzn.to/422UAYI" target="_blank" >
-    <div class="product">
-      <h3>Dhoti Kurta</h3>
-      <img src="https://m.media-amazon.com/images/I/617VcHjIujL._UL1500_.jpg" alt="Product 4" class="hover" >
-      <p style="font-size: 25px; font-family: georgia;">
-Brand: Jimmy Jammy<br>
-Jimmy Jammy Ethnic Wear Dhoti Kurta for Baby Boys & Kids 100% Cotton ( 1 Months - 2 Years ) Boys Summer Dress
-      <b> Available according to Different Age Group </b> </p>
-</div></a>
-
-
-
-<a href="https://amzn.to/3LHLjzS" target="_blank" >
-<div class="product">
-<h3>Ethnic Kurta</h3>
-<img src="https://m.media-amazon.com/images/I/51SDHFl29IL._UL1500_.jpg" alt="Product 5" class="hover" >
-<img src="https://m.media-amazon.com/images/I/515m18EZNaL._UL1500_.jpg" alt="Product 5" class="hover" >
-<p style="font-size: 25px; font-family: georgia;">Brand: GREAT BEAR <br>
- Boys Festive & Party, Ethnic Kurta, Waistcoat and Pyjama Set
-   Available according to Different Age Group 
-  
-  </p>
-</div></a>
-
-<a href="https://amzn.to/3Vl2bzr" target="_blank" >
-<div class="product">
-<h3> Satin Floral Printed Frock</h3>
-<img src="https://m.media-amazon.com/images/I/71DVriKA-sL._UL1500_.jpg" alt="Product 5" class="hover"  >
-<p style="font-size: 25px; font-family: georgia;" >Brand: Buy & Try <br>
-Buy & Try Girl's Satin Floral Printed Frock Knee Length Short Frocks Dress..</p>
-</div></a>
-
-
-<h2 id="toys" > Educational Toys </h2>
-
-
-<a href="https://amzn.to/3LbU0ko" target="_blank" >
-<div class="product">
-<h3> LCD Writing Tablet </h3>
-<img src="https://m.media-amazon.com/images/I/61J3so-DN3L._SL1500_.jpg" alt="Product 5" class="hover" >
-<img src="https://m.media-amazon.com/images/I/61++aiOH-2L._SL1244_.jpg" alt="Product 5" class="hover" >
-<p style="font-size: 25px; font-family: georgia;">SUPER TOY <br>
-SUPER TOY 8.5 Inch LCD Writing Tablet E-Notepad Ruff Pad (Multicolor)</p>
-</div></a>
-
-
-
-<a href="https://amzn.to/3LEUYHm" target="_blank" >
-<div class="product">
-<h3> Einstein Box </h3>
-<img src="https://m.media-amazon.com/images/I/61b0qbjPKOL._SL1000_.jpg" alt="Product 5" class="hover" >
-<img src="https://m.media-amazon.com/images/I/81NKZlxj5-S._SL1500_.jpg" alt="Product 5" class="hover" >
-<img src="https://m.media-amazon.com/images/I/818MU1OUabS._SL1500_.jpg" alt="Product 5" class="hover" >
-<img src="https://m.media-amazon.com/images/I/81Ib6lij8gS._SL1500_.jpg" alt="Product 5" class="hover" >
-<p style="font-size: 25px; font-family: georgia;">SUPER TOY <br>
-Einstein Box for 2 Year Old Baby Boys and Girls, Learning and Educational Gift Pack of Toys and Books-Cardboard,Multicolour</p>
-</div></a>
-
-
-
-<a href="https://amzn.to/3Nsp7uU" target="_blank" >
-<div class="product">
-<h3> Spelling Puzzle </h3>
-<img src="https://m.media-amazon.com/images/I/51MRw3PyXiL.jpg" alt="Product 5" class="hover" >
-<img src="https://m.media-amazon.com/images/I/91TJVb8I6aL._SL1500_.jpg" alt="Product 5" class="hover" >
-<img src="https://m.media-amazon.com/images/I/91Xn1ZC64cL._SL1500_.jpg" alt="Product 5" class="hover" style="margin-right: 20px" >
-<img src="https://m.media-amazon.com/images/I/71CL8SFos8L._SL1500_.jpg" alt="Product 5" class="hover" style=" margin-left: 20px ;  border-radius: 0px ; " >
-<p style="font-size: 25px; font-family: georgia;">
-Play Poco Spelling Fun Type 1 - 150 Piece Spelling Puzzle - Learn to Spell 50 Three Letter Words - Beautiful Colorful Pictures</p>
-</div></a>
-
-
-
-
-
-
-</div>
-<footer style="background-color: lightblue; padding: 10px; text-align: center;"> 
-<p style="font-weight: bold;"> Thanks for visiting our Page. Please Follow <b> <a href="https://www.instagram.com/mee.kids/" target="_blank"> @Mee.kids</b> </a> on Instagram and Subscribe <b><a href="https://www.youtube.com/@Mee_kids"  target="_blank" > Our Youtube channel </b> </a>.</p>
-<p style="font-size: 6px" >Number of visitors: <span id="number">10</span></p>
-<script type="text/javascript">
-    var totalNumber = 0;
-
-function generateNumber() {
-  var randomNum = Math.floor(Math.random() * 8) + 2;
-  totalNumber += randomNum;
-  document.getElementById("number").innerHTML = totalNumber;
-}
-
-generateNumber(); // Call the function once when the page loads
-
-setInterval(generateNumber, 3600); // Call the function every hour (in milliseconds)
-  
-  
-  // Toggle the visibility of the navigation bar when the button is clicked
-
-
-
-
-  var navIcon = document.getElementById('nav-icon');
-  var navLinks = document.getElementsByTagName('nav')[0];
-  navIcon.addEventListener('click', function() {
-    this.classList.toggle('open');
-    if (navLinks.style.display === 'block') {
-      navLinks.style.display = 'none';
-    } else {
-      navLinks.style.display = 'block';
-    }
-  });
-  var navLinksArray = Array.from(navLinks.getElementsByTagName('a'));
-  navLinksArray.forEach(function(link) {
-    link.addEventListener('click', function() {
-      navIcon.classList.remove('open');
-      navLinks.style.display = 'none';
-    });
-  });
-
- 
-
-
-
-</script>
-  
-  
-</script>
-</footer>
+        loadQuestion();
+        document.addEventListener('keyup', nextQuestion);
+    </script>
 </body>
 </html>
